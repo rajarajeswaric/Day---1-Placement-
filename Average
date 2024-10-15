@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int sum(int* arr,int n)
+{
+    int s = *arr;
+    int avg;
+    
+    for(int i=1;i<n;i++)
+    {
+        s += *(arr+i);
+        avg = s/n;
+    }
+    return avg;
+    
+}
+
+int main()
+{
+    int arr[] = {1,2,3,4,5};
+    
+    int n = sizeof(arr)/sizeof(arr[0]);
+    cout<<"Average: "<<sum(arr,n)<<" "<<endl;
+
+    return 0;
+}
